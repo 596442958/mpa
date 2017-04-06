@@ -1,4 +1,5 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using mpa.Authorization.Roles;
 using mpa.MultiTenancy;
@@ -42,6 +43,12 @@ namespace mpa.EntityFramework
          : base(existingConnection, contextOwnsConnection)
         {
 
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //修改abp默认表前缀
+            modelBuilder.ChangeAbpTablePrefix<Tenant, Role, User>("tb");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
