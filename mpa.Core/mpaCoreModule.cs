@@ -23,8 +23,8 @@ namespace mpa
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
-            //Remove the following line to disable multi-tenancy.
-            Configuration.MultiTenancy.IsEnabled = mpaConsts.MultiTenancyEnabled;
+            //Remove the following line to disable multi-tenancy.禁用多租户
+            //Configuration.MultiTenancy.IsEnabled = mpaConsts.MultiTenancyEnabled;
 
             //Add/remove localization sources here
             Configuration.Localization.Sources.Add(
