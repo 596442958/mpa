@@ -147,6 +147,18 @@
     <Compile Include="Migrations\201704061516087_ChangeTablePrefix.Designer.cs">
       <DependentUpon>201704061516087_ChangeTablePrefix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704061545122_AddTasksInfo.cs" />
+    <Compile Include="Migrations\201704061545122_AddTasksInfo.Designer.cs">
+      <DependentUpon>201704061545122_AddTasksInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704061548337_changeTable.cs" />
+    <Compile Include="Migrations\201704061548337_changeTable.Designer.cs">
+      <DependentUpon>201704061548337_changeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704061556307_changeTableName.cs" />
+    <Compile Include="Migrations\201704061556307_changeTableName.Designer.cs">
+      <DependentUpon>201704061556307_changeTableName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="mpaDataModule.cs" />
@@ -175,6 +187,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704061516087_ChangeTablePrefix.resx">
       <DependentUpon>201704061516087_ChangeTablePrefix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061545122_AddTasksInfo.resx">
+      <DependentUpon>201704061545122_AddTasksInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061548337_changeTable.resx">
+      <DependentUpon>201704061548337_changeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061556307_changeTableName.resx">
+      <DependentUpon>201704061556307_changeTableName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

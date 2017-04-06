@@ -4,6 +4,8 @@ using Abp.Zero.EntityFramework;
 using mpa.Authorization.Roles;
 using mpa.MultiTenancy;
 using mpa.Users;
+using mpa.Tasks;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace mpa.EntityFramework
 {
@@ -48,7 +50,11 @@ namespace mpa.EntityFramework
         {
             //修改abp默认表前缀
             modelBuilder.ChangeAbpTablePrefix<Tenant, Role, User>("tb");
+            //删除表复数形式
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
         }
+
+        public IDbSet<TasksInfo> TasksInfo { get; set; }
     }
 }
